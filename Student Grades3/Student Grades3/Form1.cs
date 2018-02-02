@@ -31,5 +31,32 @@ namespace Student_Grades3
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Calling the Halt procedure
+            Halt();
+
+
+        }
+
+        //Procedure to Exit
+        public static void Halt()
+        { //Local variable to store result
+            DialogResult dr;
+
+            //accept response
+            dr = MessageBox.Show("Are you sure you want to exit?",
+                "Confirm Exit",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            //if yes then close program
+            if (dr == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
+
     }
 }
